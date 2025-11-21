@@ -1,4 +1,4 @@
-'strict'
+'use strict'
 
 const seq = function (...seq) {
   let stack = [];

@@ -1,23 +1,23 @@
-'strict'
+'use strict'
 
 const array = function() {
   const arr = [];
   
-  function wrapper(index) {
+  function innerArray(index) {
     return arr[index];
   }
 
-  wrapper.push = function(value) {
+  innerArray.push = function(value) {
     arr.push(value);
   };
 
-  wrapper.pop = function() {
-    arrLast = arr[arr.length - 1];
+  innerArray.pop = function() {
+    const arrLast = arr[arr.length - 1];
     arr.pop();
     return arrLast;
   }
 
-  return wrapper;
+  return innerArray;
 };
 
 const arr = array();
